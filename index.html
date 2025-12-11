@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport Match Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. หน้าจอเริ่มต้น (Start Screen) -->
+    <div id="start-screen" class="screen center-content">
+        <h1 class="game-title">Sport Match</h1>
+        <button id="start-btn" class="start-btn">START</button>
+    </div>
+
+    <!-- 2. หน้าจอเกม (Game Screen) -->
+    <div id="game-screen" class="screen hidden">
+        <div class="header">
+            <h2>Sport Match</h2>
+            <div class="score-board">คะแนน: <span id="score">0</span></div>
+        </div>
+
+        <div class="game-container">
+            <div class="grid" id="grid">
+                <!-- การ์ดจะถูกสร้างด้วย JavaScript -->
+            </div>
+        </div>
+        
+        <button onclick="location.reload()" class="restart-btn">เริ่มใหม่</button>
+    </div>
+
+    <!-- 3. หน้าจอชนะ (Win Screen) -->
+    <div id="win-screen" class="screen hidden center-content">
+        <h1 class="game-title" style="color: #27ae60;">ยินดีด้วย!<br>คุณชนะแล้ว</h1>
+        <p class="final-text">จับคู่ครบทุกภาพแล้ว</p>
+        <button onclick="location.reload()" class="start-btn">เล่นอีกครั้ง</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

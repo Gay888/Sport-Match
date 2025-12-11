@@ -1,0 +1,147 @@
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 0.5s ease;
+    /* เพิ่มเพื่อให้ซ้อนทับกันได้พอดี */
+    position: absolute; 
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+}
+
+.center-content {
+    justify-content: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* --- Start & Win Screen Styling --- */
+.game-title {
+    font-size: 60px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.start-btn {
+    background: linear-gradient(145deg, #ff4b4b, #d63031);
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 15px 60px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(214, 48, 49, 0.4);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.start-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(214, 48, 49, 0.6);
+    background: linear-gradient(145deg, #ff6b6b, #e17055);
+}
+
+.final-text {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* --- Game Screen Styling --- */
+#game-screen {
+    padding-top: 50px; /* เว้นระยะจากขอบบน */
+    position: relative; /* ให้เลื่อนตาม Flow ปกติเมื่อแสดงผล */
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    color: #333;
+    margin: 10px 0;
+}
+
+.score-board {
+    font-size: 24px;
+    background: #fff;
+    padding: 8px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: inline-block;
+}
+
+.game-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 15px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #bdc3c7;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    user-select: none;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #aeb6bf;
+}
+
+.card.revealed {
+    background-color: #ffffff;
+    border: 2px solid #ecf0f1;
+    cursor: default;
+}
+
+.restart-btn {
+    margin-top: 25px;
+    padding: 10px 25px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+}
